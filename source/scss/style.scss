@@ -1,0 +1,477 @@
+$darkBrown: #322A1F;
+$yellow:#FCDC62;
+$orange:#E67531;
+$redWine:#59443B;
+$shadow:#CCDDCC;
+$lightBrown:#94867D;
+@import url('https://fonts.googleapis.com/css?family=Play'); //font-family: 'Play', sans-serif;
+
+
+html, body {
+  background-image:linear-gradient(white, #e7e7e7);
+  font-family: 'Play', sans-serif;
+  height:100%;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.container {
+  width:700px;
+  height:700px;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    transform:scale(.5);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    transform:scale(.75);
+  }
+}
+
+.shadow {
+  position:absolute;
+  width:540px;
+  height:302px;
+  margin-top:28px;
+  margin-left: 30px;
+  border-radius:8px;
+  background-color: $shadow;
+}
+.shadow::before {
+  position:absolute;
+  content:'';
+  width:0;
+  height:0;
+  border:15px solid $shadow;
+  border-color:$shadow $shadow transparent transparent;
+  bottom:2px;
+  left:-27px;
+}
+.shadow::after {
+  position:absolute;
+  content:'';
+  width:0;
+  height:0;
+  border:15px solid $shadow;
+  border-color:transparent transparent $shadow $shadow;
+  top:-28px;
+  right:2px;
+}
+
+.tape1 {
+  position:absolute;
+  width:540px;
+  height:300px;
+  background-color:$redWine;
+  background-image: radial-gradient($darkBrown 1px, transparent 1px);
+  background-size:6px 6px;
+  background-position: 0 0, 0px 30px;
+  border-radius:0 0 8px 8px;
+  overflow:hidden;
+  .darkframe {
+    .top {
+      position:absolute;
+      background-color:$darkBrown;
+      width:100%;
+      height:18%;
+    }
+    .top::before {
+      position:absolute;
+      content:'';
+      width:6%;
+      height:220%;
+      background-color:$darkBrown;
+    }
+    .top::after {
+      position:absolute;
+      content:'';
+      width:6%;
+      height:220%;
+      right:0;
+      background-color:$darkBrown;
+    }
+    .left {
+      position:absolute;
+      content:'';
+      width:3%;
+      height:100%;
+      background-color:$darkBrown;
+    }
+    .right {
+      position:absolute;
+      content:'';
+      width:3%;
+      height:100%;
+      right:0;
+      background-color:$darkBrown;
+    }
+    .bottom {
+      position:absolute;
+      content:'';
+      width:100%;
+      height:5%;
+      bottom:0;
+      background-color:$darkBrown;
+    }
+  }
+  .lightframe {
+    .top {
+      position:absolute;
+      left: 3%;
+      top:13.5%;
+      width:94%;
+      height:3%;
+      background-color:$redWine ;
+    }
+    .top::before {
+      position:absolute;
+      top:13.5%;
+      content:'';
+      width:2%;
+      height:800%;
+      background-color:$redWine ;
+    }
+    .top::after {
+      position:absolute;
+      right:0;
+      top:13.5%;
+      content:'';
+      width:2%;
+      height:800%;
+      background-color:$redWine ;
+    }
+    .left {
+      position:absolute;
+      width:2%;
+      height:63%;
+      bottom:0;
+      background-color:$redWine ;
+    } 
+    .left::before {
+      position:absolute;
+      width:200%;
+      height:5%;
+      content:'';
+      top:-3.5%;
+      background-color:$redWine ;
+    }
+    .right {
+      position:absolute;
+      width:2%;
+      right:0;
+      height:63%;
+      bottom:0;
+      background-color:$redWine ;
+    } 
+    .right::before {
+      position:absolute;
+      width:200%;
+      height:5%;
+      content:'';
+      top:-3.5%;
+      right:0;
+      background-color:$redWine ;
+    }
+    .bottom {
+      position:absolute;
+      width:100%;
+      height:3.1%;
+      background-color: $redWine;
+      bottom:0;
+    }
+  }
+  .textContent {
+    position:absolute;
+    width:100%;
+    background-color:red;
+    .text1 {
+      position:absolute;
+      margin-top:2.5%;
+      float:right;
+      right:56.5%;
+      font-size:13px;
+      color:$redWine;
+    }
+    .text2 {
+      margin-top:2.5%;
+      position:absolute;
+      float:left;
+      left:54%;
+      font-size:13px;
+      color:$redWine;
+    }
+    .triangle {
+      position:absolute;
+      width:0;
+      height:0;
+      border:15px solid $redWine;
+      border-color: transparent transparent $redWine transparent;
+      left:46%;
+    }
+  }
+}
+
+.centerShadow-outside {
+  position:absolute;
+  width:88%;
+  height:120%;
+  border-radius:50%;
+  top:0.5%;
+  left:6%;
+  overflow:hidden;
+}
+.centerShadow-outside::after {
+  position:absolute;
+  content:'';
+  position:absolute;
+  top:33%;
+  width:100%;
+  height:34%;
+  background-color: $darkBrown;
+}
+
+.tapeCenter {
+  position:absolute;
+  width:84%;
+  height:120%;
+  border-radius:50%;
+  top:-4%;
+  left:8%;
+  overflow:hidden;
+  .center {
+    position:absolute;
+    top:33%;
+    width:100%;
+    height:34%;
+    background-color: $yellow;
+    overflow:hidden;
+    .centerShadow-inside1 {
+      position:absolute;
+      width:25%;
+      height:84%;
+      right:-9px;
+      border-radius:30px;
+      border:17px solid $redWine;
+      opacity:.4;
+    }
+    .centerShadow-inside2 {
+      position:absolute;
+      width: 30%;
+      height: 120%;
+      top:-20px;
+      border: 19px solid $redWine;
+      border-color: transparent $redWine;
+      border-radius: 50% 0 0 45%;
+      opacity: .4;
+    }
+    .centerShadow-inside2::before {
+      position:absolute;
+      content:'';
+      background-color: $redWine;
+      width:100%;
+      height:16%;
+      left:-5%;
+    }
+    .centerShadow-inside3{
+      position:absolute;
+      background-color: $shadow;
+      width:100%;
+      height:100%;
+      opacity:.15;
+    }
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+    .wheel1 {
+      position:absolute;
+      top:-17%;
+      left:10%;
+      width:35%;
+      height:130%;
+      border-radius:50%;
+      overflow:hidden;
+      background: repeating-radial-gradient($redWine, $redWine 7%, $darkBrown 5%, $darkBrown 10%);
+      -webkit-animation:spin 1.5s linear infinite;
+      -moz-animation:spin 1.5s linear infinite;
+      animation:spin 1.5s linear infinite;
+      }
+    .wheel1::before {
+      position:absolute;
+      top:2%;
+      content:'';
+      width:0;
+      height:0;
+      border:81.6px solid $redWine;
+      border-color: transparent $darkBrown; 
+    }
+    .wheel2 {
+      position:absolute;
+      top:-17%;
+      right:10%;
+      width:35%;
+      height:130%;
+      background: repeating-radial-gradient($redWine, $redWine 7%, $darkBrown 5%, $darkBrown 10%);
+      border-radius:50%;
+      overflow:hidden;
+      -webkit-animation:spin 1.5s linear infinite;
+      -moz-animation:spin 1.5s linear infinite;
+      animation:spin 1.5s linear infinite;
+      }
+    .wheel2::before {
+      position:absolute;
+      top:2%;
+      content:'';
+      width:0;
+      height:0;
+      border:81.6px solid $redWine;
+      border-color:$darkBrown transparent; 
+    }
+    .wheel-center {
+      position:absolute;
+      width:30%;
+      height:30%;
+      top:35%;
+      left:35%;
+      border-radius:50%;
+      background-color: rgba(255,255,255,0.88);
+      .wheel-center-center {
+        position:absolute;
+        width:55%;
+        height:55%;
+        top:10%;
+        left:11%;
+        border-radius:50%;
+        border:6px solid $yellow;
+      }
+      .wheel-center-circle {
+        position:absolute;
+        width:30%;
+        height:28%;
+        background-color: $yellow;
+        border-radius:50%;
+        top:35%;
+        left:35%;
+      }
+    }
+  }
+}
+.centerFrame {
+  position:absolute;
+  width:100%;
+  height:45%;
+  top:33.5%;
+  overflow:hidden;
+  
+  .left_right {
+    position:absolute;
+   width:80%;
+   height:275%;
+   left:6.3%;
+   border-radius:50%;
+   border:20px solid $lightBrown;
+   top:-100%;
+  }
+  .top {
+    position:absolute;
+    width:80%;
+    height:10%;
+    left:10%;
+    background-color: $lightBrown;
+  }
+  .bottom {
+    position:absolute;
+    width:80%;
+    height:10%;
+    left:10%;
+    bottom:0;
+    background-color: $lightBrown;
+  }
+  .centerleft {
+    position:absolute;
+    width:30%;
+    height:91.5%;
+    top:-7.5%;
+    border-radius:40px;
+    border:15px solid $yellow;
+    border-color: transparent $lightBrown transparent transparent;
+  }
+  .centerright {
+    position:absolute;
+    width:30%;
+    height:91.5%;
+    top:-7.5%;
+    right:0;
+    border-radius:40px;
+    border:15px solid $yellow;
+    border-color: transparent transparent transparent $lightBrown;
+  }
+  .center {
+    position:absolute;
+    width:33%;
+    height:100%;
+    background-color: $lightBrown;
+    left:33%;
+    .label {
+      position:absolute;
+      width:85%;
+      height:75%;
+      background-color: $darkBrown;
+      border-radius:8px;
+      top:12.5%;
+      left:9.2%;
+      box-shadow: 1.5px 0px 3px $darkBrown;
+      .line1 {
+        position:absolute;
+        width:80%;
+        height:1%;
+        top:38%;
+        left:10%;
+        background-color: #fff;
+      }
+      .line2 {
+        position:absolute;
+        width:80%;
+        height:1%;
+        top:50%;
+        left:10%;
+        background-color: #fff;
+      }
+      .line3 {
+        position:absolute;
+        width:80%;
+        height:1%;
+        top:68%;
+        left:10%;
+        background-color: #fff;
+      }
+    }
+    .label::before {
+      position:absolute;
+      content:'';
+      width:100%;
+      height:70%;
+      top:20%;
+      background-color: #CCCCCC;
+    }
+  }
+  .center::before {
+    position:absolute;
+    content:'';
+    width:95%;
+    height:85%;
+    top:7%;
+    left:4.5%;
+    border-radius:10px;
+    background-color: $redWine;
+  }
+}

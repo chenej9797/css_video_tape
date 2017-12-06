@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css?family=Play");
+html, body {
+  background-image: linear-gradient(white, #e7e7e7);
+  font-family: 'Play', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.container {
+  width: 700px;
+  height: 700px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@media screen and (max-width: 768px) {
+  .container {
+    transform: scale(0.5); } }
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    transform: scale(0.75); } }
+
+.shadow {
+  position: absolute;
+  width: 540px;
+  height: 302px;
+  margin-top: 28px;
+  margin-left: 30px;
+  border-radius: 8px;
+  background-color: #CCDDCC; }
+
+.shadow::before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 15px solid #CCDDCC;
+  border-color: #CCDDCC #CCDDCC transparent transparent;
+  bottom: 2px;
+  left: -27px; }
+
+.shadow::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 15px solid #CCDDCC;
+  border-color: transparent transparent #CCDDCC #CCDDCC;
+  top: -28px;
+  right: 2px; }
+
+.tape1 {
+  position: absolute;
+  width: 540px;
+  height: 300px;
+  background-color: #59443B;
+  background-image: radial-gradient(#322A1F 1px, transparent 1px);
+  background-size: 6px 6px;
+  background-position: 0 0, 0px 30px;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden; }
+  .tape1 .darkframe .top {
+    position: absolute;
+    background-color: #322A1F;
+    width: 100%;
+    height: 18%; }
+  .tape1 .darkframe .top::before {
+    position: absolute;
+    content: '';
+    width: 6%;
+    height: 220%;
+    background-color: #322A1F; }
+  .tape1 .darkframe .top::after {
+    position: absolute;
+    content: '';
+    width: 6%;
+    height: 220%;
+    right: 0;
+    background-color: #322A1F; }
+  .tape1 .darkframe .left {
+    position: absolute;
+    content: '';
+    width: 3%;
+    height: 100%;
+    background-color: #322A1F; }
+  .tape1 .darkframe .right {
+    position: absolute;
+    content: '';
+    width: 3%;
+    height: 100%;
+    right: 0;
+    background-color: #322A1F; }
+  .tape1 .darkframe .bottom {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5%;
+    bottom: 0;
+    background-color: #322A1F; }
+  .tape1 .lightframe .top {
+    position: absolute;
+    left: 3%;
+    top: 13.5%;
+    width: 94%;
+    height: 3%;
+    background-color: #59443B; }
+  .tape1 .lightframe .top::before {
+    position: absolute;
+    top: 13.5%;
+    content: '';
+    width: 2%;
+    height: 800%;
+    background-color: #59443B; }
+  .tape1 .lightframe .top::after {
+    position: absolute;
+    right: 0;
+    top: 13.5%;
+    content: '';
+    width: 2%;
+    height: 800%;
+    background-color: #59443B; }
+  .tape1 .lightframe .left {
+    position: absolute;
+    width: 2%;
+    height: 63%;
+    bottom: 0;
+    background-color: #59443B; }
+  .tape1 .lightframe .left::before {
+    position: absolute;
+    width: 200%;
+    height: 5%;
+    content: '';
+    top: -3.5%;
+    background-color: #59443B; }
+  .tape1 .lightframe .right {
+    position: absolute;
+    width: 2%;
+    right: 0;
+    height: 63%;
+    bottom: 0;
+    background-color: #59443B; }
+  .tape1 .lightframe .right::before {
+    position: absolute;
+    width: 200%;
+    height: 5%;
+    content: '';
+    top: -3.5%;
+    right: 0;
+    background-color: #59443B; }
+  .tape1 .lightframe .bottom {
+    position: absolute;
+    width: 100%;
+    height: 3.1%;
+    background-color: #59443B;
+    bottom: 0; }
+  .tape1 .textContent {
+    position: absolute;
+    width: 100%;
+    background-color: red; }
+    .tape1 .textContent .text1 {
+      position: absolute;
+      margin-top: 2.5%;
+      float: right;
+      right: 56.5%;
+      font-size: 13px;
+      color: #59443B; }
+    .tape1 .textContent .text2 {
+      margin-top: 2.5%;
+      position: absolute;
+      float: left;
+      left: 54%;
+      font-size: 13px;
+      color: #59443B; }
+    .tape1 .textContent .triangle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 15px solid #59443B;
+      border-color: transparent transparent #59443B transparent;
+      left: 46%; }
+
+.centerShadow-outside {
+  position: absolute;
+  width: 88%;
+  height: 120%;
+  border-radius: 50%;
+  top: 0.5%;
+  left: 6%;
+  overflow: hidden; }
+
+.centerShadow-outside::after {
+  position: absolute;
+  content: '';
+  position: absolute;
+  top: 33%;
+  width: 100%;
+  height: 34%;
+  background-color: #322A1F; }
+
+.tapeCenter {
+  position: absolute;
+  width: 84%;
+  height: 120%;
+  border-radius: 50%;
+  top: -4%;
+  left: 8%;
+  overflow: hidden; }
+  .tapeCenter .center {
+    position: absolute;
+    top: 33%;
+    width: 100%;
+    height: 34%;
+    background-color: #FCDC62;
+    overflow: hidden; }
+    .tapeCenter .center .centerShadow-inside1 {
+      position: absolute;
+      width: 25%;
+      height: 84%;
+      right: -9px;
+      border-radius: 30px;
+      border: 17px solid #59443B;
+      opacity: .4; }
+    .tapeCenter .center .centerShadow-inside2 {
+      position: absolute;
+      width: 30%;
+      height: 120%;
+      top: -20px;
+      border: 19px solid #59443B;
+      border-color: transparent #59443B;
+      border-radius: 50% 0 0 45%;
+      opacity: .4; }
+    .tapeCenter .center .centerShadow-inside2::before {
+      position: absolute;
+      content: '';
+      background-color: #59443B;
+      width: 100%;
+      height: 16%;
+      left: -5%; }
+    .tapeCenter .center .centerShadow-inside3 {
+      position: absolute;
+      background-color: #CCDDCC;
+      width: 100%;
+      height: 100%;
+      opacity: .15; }
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+    .tapeCenter .center .wheel1 {
+      position: absolute;
+      top: -17%;
+      left: 10%;
+      width: 35%;
+      height: 130%;
+      border-radius: 50%;
+      overflow: hidden;
+      background: repeating-radial-gradient(#59443B, #59443B 7%, #322A1F 5%, #322A1F 10%);
+      -webkit-animation: spin 1.5s linear infinite;
+      -moz-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite; }
+    .tapeCenter .center .wheel1::before {
+      position: absolute;
+      top: 2%;
+      content: '';
+      width: 0;
+      height: 0;
+      border: 81.6px solid #59443B;
+      border-color: transparent #322A1F; }
+    .tapeCenter .center .wheel2 {
+      position: absolute;
+      top: -17%;
+      right: 10%;
+      width: 35%;
+      height: 130%;
+      background: repeating-radial-gradient(#59443B, #59443B 7%, #322A1F 5%, #322A1F 10%);
+      border-radius: 50%;
+      overflow: hidden;
+      -webkit-animation: spin 1.5s linear infinite;
+      -moz-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite; }
+    .tapeCenter .center .wheel2::before {
+      position: absolute;
+      top: 2%;
+      content: '';
+      width: 0;
+      height: 0;
+      border: 81.6px solid #59443B;
+      border-color: #322A1F transparent; }
+    .tapeCenter .center .wheel-center {
+      position: absolute;
+      width: 30%;
+      height: 30%;
+      top: 35%;
+      left: 35%;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.88); }
+      .tapeCenter .center .wheel-center .wheel-center-center {
+        position: absolute;
+        width: 55%;
+        height: 55%;
+        top: 10%;
+        left: 11%;
+        border-radius: 50%;
+        border: 6px solid #FCDC62; }
+      .tapeCenter .center .wheel-center .wheel-center-circle {
+        position: absolute;
+        width: 30%;
+        height: 28%;
+        background-color: #FCDC62;
+        border-radius: 50%;
+        top: 35%;
+        left: 35%; }
+
+.centerFrame {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  top: 33.5%;
+  overflow: hidden; }
+  .centerFrame .left_right {
+    position: absolute;
+    width: 80%;
+    height: 275%;
+    left: 6.3%;
+    border-radius: 50%;
+    border: 20px solid #94867D;
+    top: -100%; }
+  .centerFrame .top {
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    left: 10%;
+    background-color: #94867D; }
+  .centerFrame .bottom {
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    left: 10%;
+    bottom: 0;
+    background-color: #94867D; }
+  .centerFrame .centerleft {
+    position: absolute;
+    width: 30%;
+    height: 91.5%;
+    top: -7.5%;
+    border-radius: 40px;
+    border: 15px solid #FCDC62;
+    border-color: transparent #94867D transparent transparent; }
+  .centerFrame .centerright {
+    position: absolute;
+    width: 30%;
+    height: 91.5%;
+    top: -7.5%;
+    right: 0;
+    border-radius: 40px;
+    border: 15px solid #FCDC62;
+    border-color: transparent transparent transparent #94867D; }
+  .centerFrame .center {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    background-color: #94867D;
+    left: 33%; }
+    .centerFrame .center .label {
+      position: absolute;
+      width: 85%;
+      height: 75%;
+      background-color: #322A1F;
+      border-radius: 8px;
+      top: 12.5%;
+      left: 9.2%;
+      box-shadow: 1.5px 0px 3px #322A1F; }
+      .centerFrame .center .label .line1 {
+        position: absolute;
+        width: 80%;
+        height: 1%;
+        top: 38%;
+        left: 10%;
+        background-color: #fff; }
+      .centerFrame .center .label .line2 {
+        position: absolute;
+        width: 80%;
+        height: 1%;
+        top: 50%;
+        left: 10%;
+        background-color: #fff; }
+      .centerFrame .center .label .line3 {
+        position: absolute;
+        width: 80%;
+        height: 1%;
+        top: 68%;
+        left: 10%;
+        background-color: #fff; }
+    .centerFrame .center .label::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 70%;
+      top: 20%;
+      background-color: #CCCCCC; }
+  .centerFrame .center::before {
+    position: absolute;
+    content: '';
+    width: 95%;
+    height: 85%;
+    top: 7%;
+    left: 4.5%;
+    border-radius: 10px;
+    background-color: #59443B; }
